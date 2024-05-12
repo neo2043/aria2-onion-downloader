@@ -10,7 +10,6 @@ services:
     volumes:
       - ./downloader/conf:/conf
       - ./downloader/log:/log
-      - ./downloader/run:/run
       - ./downloader/data:/data
         # network_mode: host
     ports:
