@@ -1,8 +1,8 @@
-version: "3.3"
+name: aria2-oniondl
 
 services:
   downloader:
-    build: downloader
+    image: ghcr.io/neo2043/aria2-oniondl-downloader:main
     environment:
       - RPCPORT=6800
       - RPCSECRET=TEST123
@@ -11,17 +11,13 @@ services:
       - ./downloader/conf:/conf
       - ./downloader/log:/log
       - ./downloader/data:/data
-        # network_mode: host
     ports:
-      - 127.0.0.1:6800:6800
+      - 6800:6800
 
   controller:
-    build: controller
-    # network_mode: host
+    image: ghcr.io/neo2043/aria2-oniondl-controller:main
     volumes:
       - ./controller/conf:/conf
       - ./controller/logs:/logs
-      - ./controller/www:/var/www
     ports:
-      - 127.0.0.1:8080:8080
-
+      - 8080:8080
