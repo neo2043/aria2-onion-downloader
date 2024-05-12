@@ -2,6 +2,7 @@
 set -e
 
 if [ ! -f "/conf/aria2.conf" ]; then
+    echo "config file not found. using default config."
     cp -r /bak/conf /conf
 fi
 

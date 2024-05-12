@@ -2,6 +2,7 @@
 set -e
 
 if [ ! -f "/conf/nginx.conf" ]; then
+    echo "config file not found. using default config."
     cp -r /bak/conf /conf
 fi
 
