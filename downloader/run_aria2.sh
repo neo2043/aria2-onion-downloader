@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
 
+if [ ! -f "/conf/aria2.conf" ]; then
+    cp -r /bak/conf /conf
+fi
+
 touch /conf/aria2.session
 touch /log/aria2_log.txt
 
