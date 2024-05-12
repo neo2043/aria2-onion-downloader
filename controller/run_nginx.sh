@@ -5,4 +5,4 @@ if [ ! -f "/conf/nginx.conf" ]; then
     cp -r /bak/conf /conf
 fi
 
-exec nginx -c /conf/nginx.conf -g daemon off;
+exec nginx -c /conf/nginx.conf -g 'daemon off;'
