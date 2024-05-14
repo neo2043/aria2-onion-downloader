@@ -5,8 +5,8 @@ exec ls /conf
 
 if [ ! -f "/conf/aria2.conf" ]; then
     echo "config file not found. using default config."
-    cp -r /bak/conf/aria2.conf /conf
-    cp -r /bak/conf/config.json /conf
+    cp -r /bak/conf/aria2.conf /conf/
+    cp -r /bak/conf/config.json /conf/
 fi
 
 exec ls /conf

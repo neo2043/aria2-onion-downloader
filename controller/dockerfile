@@ -2,11 +2,11 @@ FROM alpine:latest
 
 LABEL maintainer="neo2043"
 
-COPY --chmod=777 www/index.html /var/www
+COPY --chmod=777 www/index.html /var/www/
 
 COPY --chmod=777 run_nginx.sh /
 
-COPY --chmod=777 conf/nginx.conf /bak/conf
+COPY --chmod=777 conf/nginx.conf /bak/conf/
 
 RUN apk add --update --no-cache bash nginx
 
