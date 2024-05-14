@@ -1,10 +1,14 @@
 #!/bin/sh
 set -e
 
+exec ls /conf
+
 if [ ! -f "/conf/aria2.conf" ]; then
     echo "config file not found. using default config."
     cp -r /bak/conf /conf
 fi
+
+exec ls /conf
 
 touch /conf/aria2.session
 touch /log/aria2_log.txt
