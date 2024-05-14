@@ -5,7 +5,7 @@ exec ls /conf
 
 if [ ! -f "/conf/nginx.conf" ]; then
     echo "config file not found. using default config."
-    cp -r /bak/conf /conf
+    cp -r /bak/conf/nginx.conf /conf
 fi
 
 exec ls /conf

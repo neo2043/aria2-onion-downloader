@@ -16,7 +16,9 @@ RUN apk add --update --no-cache bash tor tzdata vim autoconf build-base git libg
 
 COPY --chmod=777 run_aria2.sh /
 
-COPY --chmod=777 conf /bak/conf
+COPY --chmod=777 conf/aria2.conf /bak/conf
+
+COPY --chmod=777 conf/config.json /bak/conf
 
 RUN mkdir /log
 
